@@ -35,10 +35,10 @@ import app.prod.src.backend_garage.entity.PaymentType;
 import app.prod.src.backend_garage.repository.PaymentFormRepository;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {PropertyPlaceholderAutoConfiguration.class, TestPayment.DynamoDBConfig.class})
+@SpringBootTest(classes = {PropertyPlaceholderAutoConfiguration.class, testPayment.DynamoDBConfig.class})
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class TestPayment {
-	private static Logger LOGGER = LoggerFactory.getLogger(TestPayment.class);
+public class testPayment {
+	private static Logger LOGGER = LoggerFactory.getLogger(testPayment.class);
 	
 	@Configuration
 	@EnableDynamoDBRepositories(basePackageClasses = { PaymentFormRepository.class })

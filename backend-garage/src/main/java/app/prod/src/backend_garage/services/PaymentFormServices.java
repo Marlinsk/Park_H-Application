@@ -60,7 +60,7 @@ public class PaymentFormServices {
 	
 	public PaymentForm savePaymentForm(PaymentForm paymentform){
         if(logger.isInfoEnabled()){
-            logger.info("Salvando Cotacao com os detalhes {}",paymentform.toString());
+            logger.info("Salvando Cotacao com os detalhes {}", paymentform.toString());
         }
         return this.paymentFormRepository.save(paymentform);
     }
