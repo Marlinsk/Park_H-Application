@@ -48,12 +48,9 @@ public class AddressController {
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public DataAddressGarage createAddressGarage(@RequestBody @NotNull DataAddressGarage addressgarage) throws Exception {
-
-		if (addressService.isAddressGarageExists(addressgarage.getId())) {
-
-			throw new Exception("Garagem com codigo " + addressgarage.getId() + " já existe");
-		}
-
+        if (addressgarage.getId() != null) {
+        	throw new Exception("Não é possível criar um objeto com Id existente");
+        }
 		return addressService.saveAddressGarage(addressgarage);
 	}
 

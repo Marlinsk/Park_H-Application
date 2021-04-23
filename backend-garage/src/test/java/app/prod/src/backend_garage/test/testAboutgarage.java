@@ -36,7 +36,7 @@ import app.prod.src.backend_garage.repository.AboutGarageRepository;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class testAboutgarage {
       
-	private static Logger LOGGER = LoggerFactory.getLogger(testPayment.class);
+	private static Logger LOGGER = LoggerFactory.getLogger(testAboutgarage.class);
 	
 	@Configuration
 	@EnableDynamoDBRepositories(basePackageClasses = { AboutGarageRepository.class })

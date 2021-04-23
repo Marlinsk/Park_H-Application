@@ -15,7 +15,7 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 
 @Configuration
-@EnableDynamoDBRepositories(basePackages = "app.prod.src.backend_address_garage_data.repository")
+@EnableDynamoDBRepositories(basePackages = "app.prod.src.backend_garage.repository")
 public class DynamoDBConfig {
 	@Value("${amazon.aws.accesskey}")
 	private String amazonAWSAccessKey;
