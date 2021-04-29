@@ -42,13 +42,13 @@ public class AddressServices {
 	public DataAddressGarage getAddressGarageById(String id) {
 
 		if (logger.isInfoEnabled()) {
-			logger.info("Buscando garagem com o codigo {}", id);
+			logger.info("Buscando garagem com o código {}", id);
 		}
 
 		Optional<DataAddressGarage> back = this.addressRepo.findById(id);
 
 		if (!back.isPresent()) {
-			throw new RuntimeException("Garagem com o codigo " + id + " não encontrada");
+			throw new RuntimeException("Garagem com o código " + id + " não encontrada");
 		}
 
 		return back.get();

@@ -38,11 +38,11 @@ public class PriceDataService {
 
 	    public PaymentForm getPriceDataById(String id){
 	        if(logger.isInfoEnabled()){
-	            logger.info("Buscando preço com o codigo {}",id);
+	            logger.info("Buscando preço com o código {}",id);
 	        }
 	        Optional<PaymentForm> retorno = this.pricedataRepository.findById(id);
 	        if(!retorno.isPresent()){
-	            throw new RuntimeException("Preço com o id "+id+" nao encontrada");
+	            throw new RuntimeException("Cotação com o id "+id+" não encontrado");
 	        }
 	        return retorno.get();
 	    }
@@ -60,14 +60,14 @@ public class PriceDataService {
 	    
 	    public PaymentForm savePriceData(PaymentForm price){
 	        if(logger.isInfoEnabled()){
-	            logger.info("Salvando Cotacao com os detalhes {}",price.toString());
+	            logger.info("Salvando Cotacão com os detalhes {}",price.toString());
 	        }
 	        return this.pricedataRepository.save(price);
 	    }
 	    
 	    public void deletePriceData(String id){
 	        if(logger.isInfoEnabled()){
-	            logger.info("Excluindo Cotacao com id {}",id);
+	            logger.info("Excluindo Cotacão com id {}",id);
 	        }
 	        this.pricedataRepository.deleteById(id);
 	    }

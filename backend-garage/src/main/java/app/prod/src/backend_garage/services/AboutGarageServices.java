@@ -37,11 +37,11 @@ public class AboutGarageServices {
 
 	public AboutGarage getAboutGarageById(String id){
         if(logger.isInfoEnabled()){
-            logger.info("Buscando preço com o codigo {}",id);
+            logger.info("Buscando informação com o código {}",id);
         }
         Optional<AboutGarage> retorno = this.aboutGarageRepository.findById(id);
         if(!retorno.isPresent()){
-            throw new RuntimeException("Preço com o id "+ id +" nao encontrada");
+            throw new RuntimeException("Informação com o id "+ id +" não encontrada");
         }
         return retorno.get();
     }
@@ -59,14 +59,14 @@ public class AboutGarageServices {
 	
 	public AboutGarage saveAboutGarage(AboutGarage aboutGarage){
         if(logger.isInfoEnabled()){
-            logger.info("Salvando Cotacao com os detalhes {}",aboutGarage.toString());
+            logger.info("Salvando informação com os detalhes {}",aboutGarage.toString());
         }
         return this.aboutGarageRepository.save(aboutGarage);
     }
 	
     public void deleteAboutGarage(String id){
         if(logger.isInfoEnabled()){
-            logger.info("Excluindo Cotacao com id {}",id);
+            logger.info("Excluindo informação com id {}",id);
         }
         this.aboutGarageRepository.deleteById(id);
     }
