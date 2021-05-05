@@ -4,7 +4,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <groupId>app.prod.src</groupId>
-  <artifactId>backend_data_address</artifactId>
+  <artifactId>backend_garage</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>backend-data-address</name>
   <description>garage address data</description>
