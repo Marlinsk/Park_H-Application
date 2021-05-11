@@ -20,6 +20,6 @@ public class Application {
 		lon.info("Inicializando...");
 		System.setProperty("server.servlet.context-path", "/garage-api");
 		new SpringApplicationBuilder(Application.class).web(WebApplicationType.SERVLET).run(args);
-        
+         
 	}
 }
