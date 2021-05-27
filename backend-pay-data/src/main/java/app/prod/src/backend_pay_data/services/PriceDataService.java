@@ -76,7 +76,4 @@ public class PriceDataService {
 	    	Optional<PaymentForm> retorno = this.pricedataRepository.findById(price.getId());
 	        return retorno.isPresent() ? true:  false;
 	    }
-	    
-	
-	
 }
