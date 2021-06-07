@@ -35,9 +35,11 @@ public class user extends extraclass {
 	private String cityname;
 	
 	@Email(message = "Email deve ser válido")
+	@NotNull(message = "Email não pode ser nulo")
 	private String email;
 	
 	@Size(min = 12, message = "A senha deve ter no mínimo 12 caracteres")
+	@NotNull(message = "Senha não pode ser nula")
 	private String password;
 
 	public user() {
