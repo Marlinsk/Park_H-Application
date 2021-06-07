@@ -7,15 +7,6 @@ import java.util.Formatter;
 
 public class extraclass {
 
-	/*
-	 * public encryptor(String senha) { super(); this.senha =
-	 * encryptPassword(senha); }
-	 * 
-	 * public String getSenha() { return senha; }
-	 * 
-	 * public void setSenha(String senha) { this.senha = senha; }
-	 */
-
 	protected static String encryptPassword(String password) {
 		String sha1 = "";
 		try {
