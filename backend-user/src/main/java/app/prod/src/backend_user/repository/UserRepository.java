@@ -10,7 +10,7 @@ import app.prod.src.backend_user.entity.user;
 @EnableScan()
 public interface UserRepository extends CrudRepository<user, String> { 
 
-     List<user>findByUsername(String username);
+     List<user>findByFullname(String fullname);
      
      List<user>findByStatename(String statename);
      
