@@ -30,8 +30,8 @@ import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 
-import app.prod.src.backend_user.entity.user;
 import app.prod.src.backend_user.entity.statename;
+import app.prod.src.backend_user.entity.user;
 import app.prod.src.backend_user.repository.UserRepository;
 
 @RunWith(SpringRunner.class)
@@ -76,13 +76,13 @@ public class usertest {
 	
 		LOGGER.info("Cadastrando usuários...");
 		
-		user usuario1 = new user("André Van Markem", "Markem04", df.parse("28/12/1969"), statename.MG.getfullnameState(), "Belo Horizonte", "MarkemAndre@gmail.com", "045tkgvop5t");
+		user usuario1 = new user("André Van Markem", df.parse("28/12/1969"), statename.MG.getfullnameState(), "Belo Horizonte", "MarkemAndre@gmail.com", "045tkgvop5t");
 		repository.save(usuario1);
 		
-		user usuario2 = new user("Markoh Dikstrage Hjanovich", "MarkohPolo", df.parse("14/03/1996"), statename.RS.getfullnameState(), "Porto Alegre", "MarkohPolo@gmail.com", "045t098j8ae5t");
+		user usuario2 = new user("Markoh Dikstrage Hjanovich", df.parse("14/03/1996"), statename.RS.getfullnameState(), "Porto Alegre", "MarkohPolo@gmail.com", "045t098j8ae5t");
 		repository.save(usuario2);
 		
-		user usuario3 = new user("Dmitri Kaspell Rodrix", "KRodrix", df.parse("04/04/1994"), statename.SP.getfullnameState(), "São Paulo", "RodrixKaspell@outlook.com", "2045HDJKLMp5t");
+		user usuario3 = new user("Dmitri Kaspell Rodrix", df.parse("04/04/1994"), statename.SP.getfullnameState(), "São Paulo", "RodrixKaspell@outlook.com", "2045HDJKLMp5t");
 		repository.save(usuario3);
 		
 		LOGGER.info("Listando todos os usuários");
@@ -94,9 +94,9 @@ public class usertest {
 		}
 		
 		LOGGER.info("Procurando um usuário pelo nickname");
-		List<user> result = repository.findByUsername("MarkohPolo");
+		List<user> result = repository.findByFullname("Markoh Dikstrage Hjanovich");
 		assertEquals(result.size(), 1);
-		assertEquals(result.get(0).getUsername(), "MarkohPolo");
+		assertEquals(result.get(0).getFullname(), "Markoh Dikstrage Hjanovich");
 		LOGGER.info("Encontrado: {}", result.get(0));
 		
 	}
@@ -107,12 +107,12 @@ public class usertest {
 		
 		LOGGER.info("Excluindo objetos...");
 		
-		List<user> result = repository.findByUsername("KRodrix");
+		List<user> result = repository.findByFullname("Markoh Dikstrage Hjanovich");
 		for (user usuario : result) {
-			LOGGER.info("Excluindo conta do usuário "+ usuario.getUsername());
+			LOGGER.info("Excluindo conta do usuário "+ usuario.getFullname());
 			repository.delete(usuario);
 		}
-		result = repository.findByUsername("KRodrix");
+		result = repository.findByFullname("Markoh Dikstrage Hjanovich");
 		assertEquals(result.size(), 0);
 		LOGGER.info("Exclusão de conta feita com sucesso");
 	}
