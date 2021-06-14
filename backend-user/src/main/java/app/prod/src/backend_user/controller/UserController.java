@@ -43,37 +43,13 @@ public class UserController {
 		throw new Exception("Usuário com código " + id + " não encontrado");
 	}
 	
-	@GetMapping(value = "{username}")
-	public user getUserByUsername(@PathVariable String username) throws Exception {
-		if (!ObjectUtils.isEmpty(username)) {
-			return userservice.getUserByUsername(username);
-		}
-		throw new Exception("Usuário " + username + " não encontrado");
-	}
-	
-	@GetMapping(value = "{cityname}")
-	public user getUserByCityname(@PathVariable String cityname) throws Exception {
-		if (!ObjectUtils.isEmpty(cityname)) {
-			return userservice.getUserByCityname(cityname);
-		}
-		throw new Exception("A cidade de nome " + cityname + " não possuí usuários");
-	}
-	
-	@GetMapping(value = "{statename}")
-	public user getUserByStatename(@PathVariable String statename) throws Exception {
-		if (!ObjectUtils.isEmpty(statename)) {
-			return userservice.getUserByStatename(statename);
-		}
-		throw new Exception("Estado de " + statename + " não possuí usuários");
-	}
-	
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public user createUser(@RequestBody @NotNull user username) throws Exception {
-        if (username.getUsername() != null) {
-        	throw new Exception("Usuário com o nome " + username + " já existe");
-        }
-		return userservice.saveUser(username);
+	public user createUser(@RequestBody @NotNull user user) throws Exception {
+        /*if (username.getUsername() != null) {
+        	throw new Exception("Usuário com o nickname " + username + " já existe");
+        }*/
+		return userservice.saveUser(user);
 	}
 	
 	@PutMapping(value = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE)

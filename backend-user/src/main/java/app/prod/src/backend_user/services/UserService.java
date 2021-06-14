@@ -50,14 +50,14 @@ public class UserService {
 	}
 		
 	// Busca o usuário pelo nick
-	public user getUserByUsername(String username) {
+	public user getUserByFullname(String fullname) {
 
 		if (logger.isInfoEnabled()) {
-			logger.info("Buscando usuário {}", username);
+			logger.info("Buscando usuário {}", fullname);
 		}
-		List<user> lista = this.userepository.findByUsername(username);
+		List<user> lista = this.userepository.findByFullname(fullname);
 		if (lista == null || lista.isEmpty()) {
-			throw new RuntimeException("Usuário " + username + " não encontrada");
+			throw new RuntimeException("Usuário " + fullname + " não encontrada");
 		}
 		return lista.get(0);
 	}
@@ -101,7 +101,7 @@ public class UserService {
 	public void deleteUser(String id) {
 
 		if (logger.isInfoEnabled()) {
-			logger.info("Excluindo garagem com id {}", id);
+			logger.info("Excluindo conta de usuário com id {}", id);
 		}
 		this.userepository.deleteById(id);
 	}
