@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Formatter;
 
-public class extraclass {
+public class extraclasses {
 
 	protected static String encryptPassword(String password) {
 		String sha1 = "";
