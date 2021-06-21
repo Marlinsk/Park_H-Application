@@ -14,6 +14,9 @@ Documento do repositório back-end da aplicação.<br/>
 Os projetos neste repositório são microsserviços programados na linguagem Java com arquitetura API RestFull sobre o tema de aplicativo para divulgação de aluguel de garagem, onde os serviços vão desde a criação de conta do usuário até o anuncio do aluguel da garagem junto do preço.
 <br/>
 
+### Arquitetura do projeto<br/>
+![Diagrama da arquitetura](https://github.com/MarlonTSantosRodrigues/App_Park_H/blob/master/Arquitetura%20dos%20microsservi%C3%A7os.png)<br/> 
+
 ### Tecnologias e ferramentas utilizadas 
 - **Apache Maven:** 
   - Maven compiler plugin;  
