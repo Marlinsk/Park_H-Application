@@ -4,12 +4,6 @@ Documento do repositório back-end da aplicação.<br/>
 **Aviso:** O projeto foi desenvolvido para fins de estudos acadêmicos, por isso não recomendamos aplicar essa arquitetura na sua empresa sem avaliar se os conceitos se aplicam às necessidades que sua empresa demanda.
 <br/>
 
-## Índice
-- **Introdução;**
-- **Arquitetura do projeto;**
-- **Tecnologias e ferramentas utilizadas;**
-- **Hands On;**
-
 ## Introdução
 Os projetos neste repositório são microsserviços programados na linguagem Java com arquitetura API RestFull sobre o tema de aplicativo para divulgação de aluguel de garagem, onde os serviços vão desde a criação de conta do usuário até o anuncio do aluguel da garagem junto do preço.
 <br/>
@@ -45,6 +39,9 @@ Os projetos neste repositório são microsserviços programados na linguagem Jav
   - JUnit test 4;
 - **Docker:** utilizado para fazer os containers dos microsserviços.
 - **Postman:** utilizado para realizar os testes dos serviços RestFULL de forma programada e automatizada.
+
+## Hands On
+Aprenda na prática como funciona a aplicação.
 
 ## Dúvidas e Orientações 
 **O que eu vou encontrar neste documento?**<br/> 
