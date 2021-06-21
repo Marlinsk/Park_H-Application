@@ -41,7 +41,6 @@ Os projetos neste repositório são microsserviços programados na linguagem Jav
 - **Postman:** utilizado para realizar os testes dos serviços RestFULL de forma programada e automatizada.
 
 ## Hands On
-Aprenda na prática como funciona a aplicação.
 
 ## Dúvidas e Orientações 
 **O que eu vou encontrar neste documento?**<br/> 
