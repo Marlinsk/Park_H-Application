@@ -37,6 +37,8 @@ Os projetos neste repositório são microsserviços programados na **linguagem J
 - **Postman:** utilizado para realizar os testes dos serviços RestFULL de forma programada e automatizada.
 
 ### Arquitetura do projeto<br/>
+O back-end dos microsserviços foram feitos em projeto **Maven Java**, com dependências das tecnologias da **AWS, SpringBoot Framework e Junit**. As libary's dessas tecnologias que foram utilizadas no código do back-end foi o banco de dados NoSQL da Amazon que é o **AWS DynamoDB**, o **Spring boot framework** foi usado as library's de serviço **Rest** e **Controller**, e o **JUnit4** foi usado para fazer os testes automatizados na IDE Eclipse. <br/>
+
 <p align="center">
   <img alt="Fluxograma da arquitetura do projeto" src=".github/Arquitetura dos microsserviços.png" width="799px" height="343">
 </p>
