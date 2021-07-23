@@ -1,7 +1,7 @@
 # Aplicação Park H 
 Documento do repositório back-end da aplicação.<br/> 
 
-**Aviso:** O projeto foi desenvolvido para fins de estudos acadêmicos, por isso não recomendamos aplicar essa arquitetura na sua empresa sem avaliar se os conceitos se aplicam às necessidades que sua empresa demanda.
+**Aviso:** O projeto foi desenvolvido para fins de estudos acadêmicos, por isso não recomendamos aplicar essa arquitetura na sua empresa sem avaliar se os conceitos se aplicam para resolver às demandas de sua empresa.
 <br/>
 
 ## Introdução
