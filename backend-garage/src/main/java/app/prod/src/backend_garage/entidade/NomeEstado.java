@@ -1,6 +1,6 @@
-package app.prod.src.backend_garage.entity;
+package app.prod.src.backend_garage.entidade;
 
-public enum StateName {
+public enum NomeEstado {
 	AC("Acre"), 
     AL("Alagoas"), 
     AP("Amapá"),
@@ -29,13 +29,13 @@ public enum StateName {
     TO("Tocantins"),
     DF("Distrito Federal");
 
-	private String fullnameState;
+	private String NomeCompletoEstado;
 
-	StateName(String fullnameState) {
-		this.fullnameState = fullnameState;
+	NomeEstado(String NomeCompletoEstado) {
+		this.NomeCompletoEstado = NomeCompletoEstado;
 	}
 
-	public String getfullnameState() {
-		return fullnameState;
+	public String getNomeCompletoEstado() {
+		return NomeCompletoEstado;
 	}
 }

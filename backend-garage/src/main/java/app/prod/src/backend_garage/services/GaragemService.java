@@ -10,42 +10,41 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import app.prod.src.backend_garage.entity.DataAddressGarage;
-import app.prod.src.backend_garage.repository.AddressRepository;
-
+import app.prod.src.backend_garage.entidade.Garagem;
+import app.prod.src.backend_garage.repository.GaragemRepository;
 
 @Service
-public class AddressServices {
+public class GaragemService {
 	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-	private final AddressRepository addressRepo;
+	private final GaragemRepository garagemRepository;
 
-	public AddressServices(AddressRepository addressRepository) {
-		this.addressRepo = addressRepository;
+	public GaragemService(GaragemRepository garagemRepository) {
+		this.garagemRepository = garagemRepository;
 	}
 
-	public List<DataAddressGarage> getAddressGarage() {
+	public List<Garagem> getGaragem() {
 
 		if (logger.isInfoEnabled()) {
 			logger.info("Buscando todos os objetos");
 		}
 
-		Iterable<DataAddressGarage> lista = this.addressRepo.findAll();
+		Iterable<Garagem> lista = this.garagemRepository.findAll();
 
 		if (lista == null) {
-			return new ArrayList<DataAddressGarage>();
+			return new ArrayList<Garagem>();
 		}
 
 		return IteratorUtils.toList(lista.iterator());
 	}
 
-	public DataAddressGarage getAddressGarageById(String id) {
+	public Garagem getGaragemById(String id) {
 
 		if (logger.isInfoEnabled()) {
 			logger.info("Buscando garagem com o código {}", id);
 		}
 
-		Optional<DataAddressGarage> back = this.addressRepo.findById(id);
+		Optional<Garagem> back = this.garagemRepository.findById(id);
 
 		if (!back.isPresent()) {
 			throw new RuntimeException("Garagem com o código " + id + " não encontrada");
@@ -54,49 +53,49 @@ public class AddressServices {
 		return back.get();
 	}
 
-	public DataAddressGarage getAddressGarageByNumber(String num) {
+	public Garagem getGaragemByTituloAnuncio(String tituloAnuncio) {
 
 		if (logger.isInfoEnabled()) {
-			logger.info("Buscando garagem com o número {}", num);
+			logger.info("Buscando garagem com o número {}", tituloAnuncio);
 		}
 
-		List<DataAddressGarage> list = this.addressRepo.findByAddressnumber(num);
+		List<Garagem> list = this.garagemRepository.findByTituloAnuncio(tituloAnuncio);
 
 		if (list == null || list.isEmpty()) {
-			throw new RuntimeException("Garagem com o número " + num + " não encontrada");
+			throw new RuntimeException("Garagem com o número " + tituloAnuncio + " não encontrada");
 		}
 
 		return list.get(0);
 	}
 
-	public DataAddressGarage saveAddressGarage(DataAddressGarage addressgarage) {
+	public Garagem saveGaragem(Garagem garagem) {
 
 		if (logger.isInfoEnabled()) {
-			logger.info("Salvando garagem com os detalhes {}", addressgarage.toString());
+			logger.info("Salvando garagem com os detalhes {}", garagem.toString());
 		}
 
-		return this.addressRepo.save(addressgarage);
+		return this.garagemRepository.save(garagem);
 	}
 
-	public void deleteAddressGarage(String id) {
+	public void deleteGaragem(String id) {
 
 		if (logger.isInfoEnabled()) {
 			logger.info("Excluindo garagem com id {}", id);
 		}
 
-		this.addressRepo.deleteById(id);
+		this.garagemRepository.deleteById(id);
 	}
 
-	public boolean isAddressGarageExists(DataAddressGarage addressgarage) {
+	public boolean isGaragemExists(Garagem garagem) {
 
-		Optional<DataAddressGarage> back = this.addressRepo.findById(addressgarage.getId());
+		Optional<Garagem> back = this.garagemRepository.findById(garagem.getId());
 
 		return back.isPresent() ? true : false;
 	}
 
-	public boolean isAddressGarageExists(String id) {
+	public boolean isGaragemExists(String id) {
 
-		Optional<DataAddressGarage> back = this.addressRepo.findById(id);
+		Optional<Garagem> back = this.garagemRepository.findById(id);
 
 		return back.isPresent() ? true : false;
 	}

@@ -23,7 +23,7 @@ public class SwaggerConfiguration {
 
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder().title("Park H API")
-				.description("API de referência quando o assunto é aluguel de garagem!").license("Licença Apache 2.0")
+				.description("API de cadastro de garagem!").license("Licença Apache 2.0")
 				.version("Versão 1.0.0").build();
 	}
 }

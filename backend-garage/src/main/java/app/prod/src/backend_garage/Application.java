@@ -17,8 +17,8 @@ public class Application {
 
 	public static void main(String[] args) {
 
-		lon.info("Inicializando...");
-		System.setProperty("server.servlet.context-path", "/garage-api");
+		lon.info("Inicializando serviço...");
+		System.setProperty("server.servlet.context-path", "/garagem-api");
 		new SpringApplicationBuilder(Application.class).web(WebApplicationType.SERVLET).run(args);
          
 	}
