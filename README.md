@@ -10,7 +10,6 @@ Os projetos neste repositório são microsserviços programados na **linguagem J
 ### Tecnologias e ferramentas utilizadas
 
 - **IDE:** Eclipse Java EE;
-
 - **Apache Maven:** 
   - Maven compiler plugin;  
   - Maven buid;
