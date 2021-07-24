@@ -7,7 +7,10 @@ Documento do repositório back-end da aplicação.<br/>
 ## Introdução
 Os projetos neste repositório são microsserviços programados na **linguagem Java** com arquitetura **API RestFull** sobre o tema de aplicativo para divulgação de aluguel de garagem, onde os serviços vão desde a criação de conta do usuário até o anuncio do aluguel da garagem junto do preço.
 
-### Tecnologias e ferramentas utilizadas 
+### Tecnologias e ferramentas utilizadas
+
+- **IDE:** Eclipse Java EE;
+
 - **Apache Maven:** 
   - Maven compiler plugin;  
   - Maven buid;
