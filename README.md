@@ -7,7 +7,10 @@ Documento do repositório back-end da aplicação.<br/>
 ## Introdução
 Os projetos neste repositório são microsserviços programados na **linguagem Java** com arquitetura **API RestFull** sobre o tema de aplicativo para divulgação de aluguel de garagem, onde os serviços vão desde a criação de conta do usuário até o anuncio do aluguel da garagem junto do preço.
 
-### Tecnologias e ferramentas utilizadas 
+### Tecnologias e ferramentas utilizadas
+
+- **IDE:** Eclipse Java EE;
+
 - **Apache Maven:** 
   - Maven compiler plugin;  
   - Maven buid;
@@ -37,8 +40,10 @@ Os projetos neste repositório são microsserviços programados na **linguagem J
 - **Postman:** utilizado para realizar os testes dos serviços RestFULL de forma programada e automatizada.
 
 ### Arquitetura do projeto<br/>
-![Diagrama da arquitetura](https://github.com/MarlonTSantosRodrigues/App_Park_H/blob/master/Arquitetura%20dos%20microsservi%C3%A7os.png)
-
 O back-end dos microsserviços foram feitos em projeto **Maven Java**, com dependências das tecnologias da **AWS, SpringBoot Framework e Junit**. As libary's dessas tecnologias que foram utilizadas no código do back-end foi o banco de dados NoSQL da Amazon que é o **AWS DynamoDB**, o **Spring boot framework** foi usado as library's de serviço **Rest** e **Controller**, e o **JUnit4** foi usado para fazer os testes automatizados na IDE Eclipse. <br/>
+
+<p align="center">
+  <img alt="Fluxograma da arquitetura do projeto" src=".github/Arquitetura dos microsserviços.png" width="799px" height="343">
+</p>
 
 Fora do back-end indo direto para o lado do cliente, foi utilizado a interface do **SwaggerUi** da libary do **Swagger** para visualizar os dados em **formato JSON** e interagir com os **protocolos Rest**, nesse caso foi também usado a ferramenta **Postman** para fazer os testes de forma automatizada. <br/>
