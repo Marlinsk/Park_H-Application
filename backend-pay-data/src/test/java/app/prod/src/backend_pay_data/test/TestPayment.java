@@ -1,3 +1,4 @@
+/*
 package app.prod.src.backend_pay_data.test;
 
 import static org.junit.Assert.assertEquals;
@@ -30,9 +31,9 @@ import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 
-import app.prod.src.backend_pay_data.entity.PaymentForm;
+import app.prod.src.backend_pay_data.entity.FormasdePagamento;
 import app.prod.src.backend_pay_data.entity.type_of_payment;
-import app.prod.src.backend_pay_data.repository.PriceDataRepository;
+import app.prod.src.backend_pay_data.repository.FormasdePagamentoRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {PropertyPlaceholderAutoConfiguration.class, TestPayment.DynamoDBConfig.class})
@@ -42,7 +43,7 @@ public class TestPayment {
 	private static Logger LOGGER = LoggerFactory.getLogger(TestPayment.class);
 	
 	@Configuration
-	@EnableDynamoDBRepositories(basePackageClasses = { PriceDataRepository.class })
+	@EnableDynamoDBRepositories(basePackageClasses = { FormasdePagamentoRepository.class })
 	public static class DynamoDBConfig {
 
 		@Value("${amazon.aws.accesskey}")
@@ -68,14 +69,14 @@ public class TestPayment {
 	}
 	
 	@Autowired
-	private PriceDataRepository repository;
+	private FormasdePagamentoRepository repository;
 	
 	@Test
 	public void teste1Criacao() throws ParseException {
 		
 		LOGGER.info("Criando objetos...");
 		
-		PaymentForm payment1 = new PaymentForm(BigDecimal.valueOf(112.00), type_of_payment.MONTHLY.getTypePay());
+		FormasdePagamento payment1 = new FormasdePagamento(BigDecimal.valueOf(112.00), type_of_payment.MONTHLY.getTypePay());
 		repository.save(payment1);
 		
 		// PaymentForm payment2 = new PaymentForm(BigDecimal.valueOf(112.00), type_of_payment.MONTHLY.getTypePay());
@@ -87,19 +88,19 @@ public class TestPayment {
 		// PaymentForm payment4 = new PaymentForm(BigDecimal.valueOf(112.00), type_of_payment.MONTHLY.getTypePay());
 		// repository.save(payment4);
 		
-		Iterable<PaymentForm> lista = repository.findAll();
+		Iterable<FormasdePagamento> lista = repository.findAll();
 		assertNotNull(lista.iterator());
 		
-		for (PaymentForm price : lista) {
+		for (FormasdePagamento price : lista) {
 			LOGGER.info(price.toString());
 		}
 		LOGGER.info("Pesquisado um objeto");
 		
-		List<PaymentForm> result = repository.findByValueRent(BigDecimal.valueOf(112.00));
+		List<FormasdePagamento> result = repository.findByValueRent(BigDecimal.valueOf(112.00));
 		assertEquals(result.size(), 4);
 		LOGGER.info("Encontrado: {}", result.size());
 	}
-	/*
+	
 	@Test
 	public void teste2Exclusao() throws ParseException {
 		
@@ -114,5 +115,5 @@ public class TestPayment {
 		result = repository.findByValueRent(BigDecimal.valueOf(112.00));
 		assertEquals(result.size(), 0);
 		LOGGER.info("Exclusão feita com sucesso");
-	}*/
+	}
 }

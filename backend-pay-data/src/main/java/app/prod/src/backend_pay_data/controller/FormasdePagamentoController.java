@@ -17,47 +17,47 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import app.prod.src.backend_pay_data.entity.PaymentForm;
-import app.prod.src.backend_pay_data.services.PriceDataService;
+import app.prod.src.backend_pay_data.entity.FormasdePagamento;
+import app.prod.src.backend_pay_data.services.FormasdePagamentoService;
 
 @RestController
 @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "payment-control")
-public class PriceDataController {
+public class FormasdePagamentoController {
 
-	private final PriceDataService priceDataService;
+	private final FormasdePagamentoService pagamentoService;
 
-	public PriceDataController(PriceDataService priceDataService) {
-		this.priceDataService = priceDataService;
+	public FormasdePagamentoController(FormasdePagamentoService pagamentoService) {
+		this.pagamentoService = pagamentoService;
 	}
 
 	@GetMapping(value = "")
-	public List<PaymentForm> getPriceData() {
-		return priceDataService.getPriceData();
+	public List<FormasdePagamento> getFormasdePagamento() {
+		return pagamentoService.getFormasdePagamento();
 	}
 
 	@GetMapping(value = "{id}")
-	public PaymentForm getPaymentFormById(@PathVariable String id) throws Exception {
+	public FormasdePagamento getFormasdePagamentoById(@PathVariable String id) throws Exception {
 		if (!ObjectUtils.isEmpty(id)) {
-			return priceDataService.getPriceDataById(id);
+			return pagamentoService.getFormasdePagamentoById(id);
 		}
 		throw new Exception("Preço com codigo " + id + " nao encontrado");
 	}
 
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public PaymentForm createPaymentForm(@RequestBody @NotNull PaymentForm price) throws Exception {
-		return priceDataService.savePriceData(price);
+	public FormasdePagamento createFormasdePagamento(@RequestBody @NotNull FormasdePagamento preco) throws Exception {
+		return pagamentoService.saveFormasdePagamento(preco);
 	}
 
 	@PutMapping(value = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public PaymentForm updatePriceData(@PathVariable String id, @RequestBody @NotNull PaymentForm price) throws Exception {
-		return priceDataService.savePriceData(price);
+	public FormasdePagamento updateFormasdePagamento(@PathVariable String id, @RequestBody @NotNull FormasdePagamento preco) throws Exception {
+		return pagamentoService.saveFormasdePagamento(preco);
 	}
 
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping(value = "{id}")
-	public boolean updatePriceData(@PathVariable String id) throws Exception {
-		priceDataService.deletePriceData(id);
+	public boolean updateFormasdePagamento(@PathVariable String id) throws Exception {
+		pagamentoService.deleteFormasdePagamento(id);
 		return true;
 	}
 }

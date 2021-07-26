@@ -11,69 +11,69 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import app.prod.src.backend_pay_data.entity.PaymentForm;
-import app.prod.src.backend_pay_data.repository.PriceDataRepository;
+import app.prod.src.backend_pay_data.entity.FormasdePagamento;
+import app.prod.src.backend_pay_data.repository.FormasdePagamentoRepository;
 
 @Service
-public class PriceDataService {
+public class FormasdePagamentoService {
 
 	private static final Logger logger= LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 	
-	private final PriceDataRepository pricedataRepository;
+	private final FormasdePagamentoRepository formasdepagamentoRepository;
 	
-	public PriceDataService(PriceDataRepository pricedataRepository) {
-		this.pricedataRepository = pricedataRepository;
+	public FormasdePagamentoService(FormasdePagamentoRepository formasdepagamentorepository) {
+		this.formasdepagamentoRepository = formasdepagamentorepository;
 	}
 	
-	 public List<PaymentForm> getPriceData(){
+	 public List<FormasdePagamento> getFormasdePagamento(){
 	        if(logger.isInfoEnabled()){
 	            logger.info("Buscando todos os objetos");
 	        }
-	        Iterable<PaymentForm> lista = this.pricedataRepository.findAll();
+	        Iterable<FormasdePagamento> lista = this.formasdepagamentoRepository.findAll();
 	        if (lista == null) {
-	        	return new ArrayList<PaymentForm>();
+	        	return new ArrayList<FormasdePagamento>();
 	        }
 	        return IteratorUtils.toList(lista.iterator());
 	    }    
 
-	    public PaymentForm getPriceDataById(String id){
+	    public FormasdePagamento getFormasdePagamentoById(String id){
 	        if(logger.isInfoEnabled()){
 	            logger.info("Buscando preço com o código {}",id);
 	        }
-	        Optional<PaymentForm> retorno = this.pricedataRepository.findById(id);
+	        Optional<FormasdePagamento> retorno = this.formasdepagamentoRepository.findById(id);
 	        if(!retorno.isPresent()){
 	            throw new RuntimeException("Cotação com o id "+id+" não encontrado");
 	        }
 	        return retorno.get();
 	    }
 	    
-	    public List<PaymentForm> getPriceDataByValueRent(BigDecimal value){
+	    public List<FormasdePagamento> getFormasdePagamentoByPreco(BigDecimal preco){
 	    	if(logger.isInfoEnabled()){
 	            logger.info("Buscando todos os objetos");
 	        }
-	        Iterable<PaymentForm> lista = this.pricedataRepository.findByValueRent(value);
+	        Iterable<FormasdePagamento> lista = this.formasdepagamentoRepository.findByPreco(preco);
 	        if (lista == null) {
-	        	return new ArrayList<PaymentForm>();
+	        	return new ArrayList<FormasdePagamento>();
 	        }
 	        return IteratorUtils.toList(lista.iterator());
 	    }
 	    
-	    public PaymentForm savePriceData(PaymentForm price){
+	    public FormasdePagamento saveFormasdePagamento(FormasdePagamento preco){
 	        if(logger.isInfoEnabled()){
-	            logger.info("Salvando Cotacão com os detalhes {}",price.toString());
+	            logger.info("Salvando Cotacão com os detalhes {}",preco.toString());
 	        }
-	        return this.pricedataRepository.save(price);
+	        return this.formasdepagamentoRepository.save(preco);
 	    }
 	    
-	    public void deletePriceData(String id){
+	    public void deleteFormasdePagamento(String id){
 	        if(logger.isInfoEnabled()){
 	            logger.info("Excluindo Cotacão com id {}",id);
 	        }
-	        this.pricedataRepository.deleteById(id);
+	        this.formasdepagamentoRepository.deleteById(id);
 	    }
 
-	    public boolean isPriceDataExists(PaymentForm price){
-	    	Optional<PaymentForm> retorno = this.pricedataRepository.findById(price.getId());
+	    public boolean isFormasdePagamentoExists(FormasdePagamento preco){
+	    	Optional<FormasdePagamento> retorno = this.formasdepagamentoRepository.findById(preco.getId());
 	        return retorno.isPresent() ? true:  false;
 	    }
 }

@@ -12,6 +12,7 @@ public class Garagem {
 	
 	private String id;
 	private String tituloAnuncio;
+	private String tipoLogradouroString;
 	private String descricaoLocal;
 	
 	private String estado;
@@ -25,7 +26,7 @@ public class Garagem {
 		super();
 	}
 
-	public Garagem(String tituloAnuncio, String descricaoLocal, String estado, String cidade, String rua, String bairro,
+	public Garagem(String tituloAnuncio, String tipoLogradouroString, String descricaoLocal, String estado, String cidade, String rua, String bairro,
 			String numero, String complementoLocal) {
 		super();
 		this.tituloAnuncio = tituloAnuncio;
@@ -119,17 +120,28 @@ public class Garagem {
 	public void setComplementoLocal(String complementoLocal) {
 		this.complementoLocal = complementoLocal;
 	}
+	
+	@DynamoDBAttribute
+	public String getTipoLogradouroString() {
+		return tipoLogradouroString;
+	}
+
+	public void setTipoLogradouroString(String tipoLogradouroString) {
+		this.tipoLogradouroString = tipoLogradouroString;
+	}
 
 	@Override
 	public String toString() {
-		return "Garagem [id=" + id + ", tituloAnuncio=" + tituloAnuncio + ", descricaoLocal=" + descricaoLocal
-				+ ", estado=" + estado + ", cidade=" + cidade + ", rua=" + rua + ", bairro=" + bairro + ", numero="
-				+ numero + ", complementoLocal=" + complementoLocal + "]";
+		return "Garagem [id=" + id + ", tituloAnuncio=" + tituloAnuncio + ", tipoLogradouroString="
+				+ tipoLogradouroString + ", descricaoLocal=" + descricaoLocal + ", estado=" + estado + ", cidade="
+				+ cidade + ", rua=" + rua + ", bairro=" + bairro + ", numero=" + numero + ", complementoLocal="
+				+ complementoLocal + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(bairro, cidade, complementoLocal, descricaoLocal, estado, id, numero, rua, tituloAnuncio);
+		return Objects.hash(bairro, cidade, complementoLocal, descricaoLocal, estado, id, numero, rua,
+				tipoLogradouroString, tituloAnuncio);
 	}
 
 	@Override
@@ -145,7 +157,8 @@ public class Garagem {
 				&& Objects.equals(complementoLocal, other.complementoLocal)
 				&& Objects.equals(descricaoLocal, other.descricaoLocal) && Objects.equals(estado, other.estado)
 				&& Objects.equals(id, other.id) && Objects.equals(numero, other.numero)
-				&& Objects.equals(rua, other.rua) && Objects.equals(tituloAnuncio, other.tituloAnuncio);
+				&& Objects.equals(rua, other.rua) && Objects.equals(tipoLogradouroString, other.tipoLogradouroString)
+				&& Objects.equals(tituloAnuncio, other.tituloAnuncio);
 	}
 	
 }
