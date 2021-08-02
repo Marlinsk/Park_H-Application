@@ -45,4 +45,4 @@ O back-end dos microsserviços foram feitos em projeto **Maven Java**, com depen
   <img alt="Fluxograma da arquitetura do projeto" src=".github/Arquitetura dos microsserviços.png" width="799px" height="343">
 </p>
 
-Fora do back-end, indo direto para o lado do cliente, foi utilizado a interface do **SwaggerUi**(libary **Swagger**) para visualizar os dados em **formato JSON** e interagir com os **protocolos Rest**, nesse caso foi também usado a ferramenta **Postman** para fazer os testes de requisição de forma automatizada. <br/>
+Fora do back-end, indo direto para o lado do cliente, foi utilizado a interface do **SwaggerUi (Swagger lib)** para visualizar os dados em **formato JSON** e interagir com os **protocolos Rest**, nesse caso foi também usado a ferramenta **Postman** para fazer os testes de requisição de forma automatizada. <br/>
