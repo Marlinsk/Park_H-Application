@@ -21,7 +21,7 @@ import app.prod.src.backend_garage.entidade.Garagem;
 import app.prod.src.backend_garage.services.GaragemService;
 
 @RestController
-@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "Cadastro-Garagem")
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "cadastro-garagem")
 public class GaragemController {
 	
 	private final GaragemService garagemService;
