@@ -6,7 +6,7 @@ import java.util.List;
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;
 
-import app.prod.src.backend_pay_data.entity.FormasdePagamento;
+import app.prod.src.backend_pay_data.entidade.FormasdePagamento;
 
 @EnableScan()
 public interface FormasdePagamentoRepository extends CrudRepository<FormasdePagamento, String> {

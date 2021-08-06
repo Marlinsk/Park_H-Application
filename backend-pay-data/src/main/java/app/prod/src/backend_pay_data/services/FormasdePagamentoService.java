@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import app.prod.src.backend_pay_data.entity.FormasdePagamento;
+import app.prod.src.backend_pay_data.entidade.FormasdePagamento;
 import app.prod.src.backend_pay_data.repository.FormasdePagamentoRepository;
 
 @Service

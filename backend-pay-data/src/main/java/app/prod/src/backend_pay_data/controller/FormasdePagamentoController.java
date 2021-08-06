@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import app.prod.src.backend_pay_data.entity.FormasdePagamento;
+import app.prod.src.backend_pay_data.entidade.FormasdePagamento;
 import app.prod.src.backend_pay_data.services.FormasdePagamentoService;
 
 @RestController
-@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "payment-control")
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "formas-de-pagamento")
 public class FormasdePagamentoController {
 
 	private final FormasdePagamentoService pagamentoService;

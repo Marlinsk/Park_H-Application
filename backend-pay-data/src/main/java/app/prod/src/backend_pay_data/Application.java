@@ -16,8 +16,8 @@ public class Application {
 private static final Logger log = LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
-		log.info("Inicializando...");
-	    System.setProperty("server.servlet.context-path", "/payment-api");
+		log.info("Inicializando serviço...");
+	    System.setProperty("server.servlet.context-path", "/pagamentos-api");
 		new SpringApplicationBuilder(Application.class).web(WebApplicationType.SERVLET).run(args);
 	}
 	
