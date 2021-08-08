@@ -15,20 +15,15 @@ public class FormasdePagamento {
 	private String tipoPagamento;
 	private BigDecimal preco;
 	
-	private boolean temIPTU = false; 
-	private BigDecimal valorIPTU;
-	
 	public FormasdePagamento() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public FormasdePagamento(String tipoPagamento, BigDecimal preco, boolean temIPTU, BigDecimal valorIPTU) {
+	public FormasdePagamento(String tipoPagamento, BigDecimal preco) {
 		super();
 		this.tipoPagamento = tipoPagamento;
 		this.preco = preco;
-		this.temIPTU = temIPTU;
-		this.valorIPTU = valorIPTU;
 	}
     
 	@DynamoDBHashKey
@@ -58,34 +53,15 @@ public class FormasdePagamento {
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
-    
-	@DynamoDBAttribute
-	public boolean isTemIPTU() {
-		return temIPTU;
-	}
-
-	public void setTemIPTU(boolean temIPTU) {
-		this.temIPTU = temIPTU;
-	}
-    
-	@DynamoDBAttribute
-	public BigDecimal getValorIPTU() {
-		return valorIPTU;
-	}
-
-	public void setValorIPTU(BigDecimal valorIPTU) {
-		this.valorIPTU = valorIPTU;
-	}
 
 	@Override
 	public String toString() {
-		return "FormasdePagamento [id=" + id + ", tipoPagamento=" + tipoPagamento + ", preco=" + preco + ", temIPTU="
-				+ temIPTU + ", valorIPTU=" + valorIPTU + "]";
+		return "FormasdePagamento [id=" + id + ", tipoPagamento=" + tipoPagamento + ", preco=" + preco + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, preco, temIPTU, tipoPagamento, valorIPTU);
+		return Objects.hash(id, preco, tipoPagamento);
 	}
 
 	@Override
@@ -97,7 +73,8 @@ public class FormasdePagamento {
 		if (getClass() != obj.getClass())
 			return false;
 		FormasdePagamento other = (FormasdePagamento) obj;
-		return Objects.equals(id, other.id) && Objects.equals(preco, other.preco) && temIPTU == other.temIPTU
-				&& Objects.equals(tipoPagamento, other.tipoPagamento) && Objects.equals(valorIPTU, other.valorIPTU);
+		return Objects.equals(id, other.id) && Objects.equals(preco, other.preco)
+				&& Objects.equals(tipoPagamento, other.tipoPagamento);
 	}
+    
 }
