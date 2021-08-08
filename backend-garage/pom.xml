@@ -7,7 +7,7 @@
   <artifactId>backend_garage</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>backend-garage</name>
-  <description>API de cadastro de dados da garagem</description>
+  <description>api de cadastro de dados da garagem</description>
   <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
