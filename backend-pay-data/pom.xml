@@ -8,8 +8,8 @@
 	</properties>
 	<artifactId>backend_collection</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>backend-pay-data</name>
-	<description>Data pay</description>
+	<name>backend-collection</name>
+	<description>api de registro de cobrança de aluguel de garagem.</description>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
