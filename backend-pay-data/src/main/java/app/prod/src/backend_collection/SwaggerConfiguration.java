@@ -1,4 +1,4 @@
-package app.prod.src.backend_pay_data;
+package app.prod.src.backend_collection;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

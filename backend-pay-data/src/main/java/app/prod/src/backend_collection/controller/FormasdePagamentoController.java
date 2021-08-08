@@ -1,4 +1,4 @@
-package app.prod.src.backend_pay_data.controller;
+package app.prod.src.backend_collection.controller;
 
 import java.util.List;
 
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import app.prod.src.backend_pay_data.entidade.FormasdePagamento;
-import app.prod.src.backend_pay_data.services.FormasdePagamentoService;
+import app.prod.src.backend_collection.entidade.FormasdePagamento;
+import app.prod.src.backend_collection.services.FormasdePagamentoService;
 
 @RestController
 @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE, path = "formas-de-pagamento")

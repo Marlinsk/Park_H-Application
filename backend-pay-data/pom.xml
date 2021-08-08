@@ -6,7 +6,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	<artifactId>backend_pay_data</artifactId>
+	<artifactId>backend_collection</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend-pay-data</name>
 	<description>Data pay</description>

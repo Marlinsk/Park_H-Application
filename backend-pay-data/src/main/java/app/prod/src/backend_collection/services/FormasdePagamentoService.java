@@ -1,4 +1,4 @@
-package app.prod.src.backend_pay_data.services;
+package app.prod.src.backend_collection.services;
 
 import java.lang.invoke.MethodHandles;
 import java.math.BigDecimal;
@@ -11,8 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import app.prod.src.backend_pay_data.entidade.FormasdePagamento;
-import app.prod.src.backend_pay_data.repository.FormasdePagamentoRepository;
+import app.prod.src.backend_collection.entidade.FormasdePagamento;
+import app.prod.src.backend_collection.repository.FormasdePagamentoRepository;
 
 @Service
 public class FormasdePagamentoService {

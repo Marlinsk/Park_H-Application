@@ -1,4 +1,4 @@
-package app.prod.src.backend_pay_data.repository;
+package app.prod.src.backend_collection.repository;
 
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
 import org.springframework.beans.factory.annotation.Value;

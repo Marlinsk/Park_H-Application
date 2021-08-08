@@ -1,4 +1,4 @@
-package app.prod.src.backend_pay_data.entidade;
+package app.prod.src.backend_collection.entidade;
 
 import java.math.BigDecimal;
 import java.util.Objects;
