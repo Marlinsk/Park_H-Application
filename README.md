@@ -1,4 +1,4 @@
-# Back-end Aplicação Park H 
+# Aplicação Park H / Back-end 
 Documentação back-end da aplicação Park H.<br/> 
 
 **Aviso:** O projeto foi desenvolvido para fins de estudos acadêmicos, por isso não recomendamos aplicar essa arquitetura na sua empresa sem avaliar se os conceitos se aplicam para resolver às demandas de sua empresa.
