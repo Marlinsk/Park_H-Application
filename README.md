@@ -31,8 +31,8 @@ Os projetos neste repositório são microsserviços programados na **linguagem J
   - Spring starter test;
   - Spring starter web;
   - Spring dev tools;
-- **Swagger Software:** 
-  - Swagger ui;
+- **Swagger:** 
+  - Swagger2 ui;
 - **JUnit:**
   - JUnit test 4;
 - **Docker:** utilizado para fazer os containers dos microsserviços.
