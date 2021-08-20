@@ -9,7 +9,7 @@ Os projetos neste repositório são microsserviços programados na **linguagem J
 
 ### Tecnologias e ferramentas utilizadas
 
-- **IDE:** Eclipse Java EE;
+- **IDE:** Eclipse. **Obs.:** Recomendamos escolher a opção de instalar o package **Eclipse IDE for Enterprise Java and Web Developers** durante o download do Eclipse IDE;
 - **Apache Maven:** 
   - Maven compiler plugin;  
   - Maven buid;
