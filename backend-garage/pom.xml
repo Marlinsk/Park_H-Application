@@ -1,19 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <groupId>app.prod.src</groupId>
-  <artifactId>backend_garage</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>backend-garage</name>
-  <description>api de cadastro de dados da garagem</description>
-  <parent>
+	</properties>
+	<groupId>app.prod.src</groupId>
+	<artifactId>backend_garage</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>backend-garage</name>
+	<description>api de cadastro de dados da garagem</description>
+	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.4.3</version>
 	</parent>
-
+	
 	<build>
 		<plugins>
 			<plugin>
