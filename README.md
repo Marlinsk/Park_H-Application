@@ -17,8 +17,8 @@ Para desenvolver esta aplicação utiliza-mos :
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Swagger UI](https://swagger.io/tools/swagger-ui/)
 - [Postman](https://www.postman.com/)
-## Libary's
-Bibiotecas dessas tecnologias que foram utilizadas :
+## Maven Dependencies
+Dependências Maven das tecnologias listadas acima :
 - **Apache Maven:** 
   - [Maven compiler plugin](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin/3.8.1);  
 - **Apache Commons:**
