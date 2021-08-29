@@ -1,11 +1,11 @@
-# Aplicação Park H  
+# Park H - API  
 Documentação back-end da aplicação Park H.<br/> 
 
 **Aviso:** O projeto foi desenvolvido para fins de estudos acadêmicos, por isso não recomendamos aplicar essa arquitetura na sua empresa sem avaliar se os conceitos se aplicam para resolver às demandas de sua empresa.
 <br/>
 
 ## O projeto
-Park H é uma plataforma feita para anúnciar aluguel de garagem, com o objetivo de melhorar a procura pelo aluguel de garagem que atende as necessidades do cliente.
+Park H é uma plataforma feita para anúnciar aluguel de garagem com o intuito de diversificar as opções desse serviço. Visando democratizar a procura pelo aluguel ideial que atende suas necessidades.
 
 O projeto foi feito durante o 5º semestre da faculdade, com o intuito de estudar como funciona um projeto feito em arquitetura de microsserviços.
 
@@ -41,4 +41,4 @@ Bibiotecas dessas tecnologias que foram utilizadas :
 - **JUnit:**
   - [JUnit](https://mvnrepository.com/artifact/junit/junit/4.13.2);
 
-Link para o documento [pom.xml](https://github.com/Marlinsk/Park_H-Backend/blob/master/backend-park/pom.xml) do projeto.
+**Link** para o documento [pom.xml](https://github.com/Marlinsk/Park_H-Backend/blob/master/backend-park/pom.xml) do projeto.
