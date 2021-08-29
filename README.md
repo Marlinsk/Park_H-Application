@@ -11,13 +11,12 @@ O projeto foi feito durante o 5º semestre da faculdade, com o intuito de estuda
 
 ## Tecnologias
 Para desenvolver esta aplicação utiliza-mos :
-- [Apache Maven](https://maven.apache.org/)
-- [Spring Boot](https://spring.io/projects/spring-boot)
 - [AWS Dynamo DB](https://aws.amazon.com/pt/dynamodb/)
+- [Apache Maven](https://maven.apache.org/)
+- [JUnit 5](https://junit.org/junit5/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
 - [Swagger UI](https://swagger.io/tools/swagger-ui/)
 - [Postman](https://www.postman.com/)
-- [JUnit 5](https://junit.org/junit5/)
-
 ## Libary's
 Bibiotecas dessas tecnologias que foram utilizadas :
 - **Apache Maven:** 
