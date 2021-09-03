@@ -47,7 +47,7 @@ Passo a passo para rodar o clone do projeto em sua máquina:<br/>
 
 **Observação:** Antes de clonar o repoitório é necessário ter uma conta na [Amazon Web Service](https://aws.amazon.com/pt/). 
 
-Execute o comando abaixo no Git Bash
+Execute o comando abaixo no Git Bash.
 ```bash
 $ git clone https://github.com/Marlinsk/Park_H-Backend.git
 ```
