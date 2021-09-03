@@ -45,7 +45,7 @@ Dependências Maven das tecnologias listadas acima :
 ## Tutorial
 Passo a passo para rodar o clone do projeto em sua máquina:<br/>
 
-**Observação:** Antes de clonar o repoitório é necessário criar uma conta na [Amazon Web Service](https://aws.amazon.com/pt/). 
+**Observação:** Antes de clonar o repoitório é necessário ter uma conta na [Amazon Web Service](https://aws.amazon.com/pt/). 
 
 Execute o comando abaixo no Git Bash
 ```bash
