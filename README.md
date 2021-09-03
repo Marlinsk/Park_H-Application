@@ -41,3 +41,14 @@ Dependências Maven das tecnologias listadas acima :
   - [JUnit](https://mvnrepository.com/artifact/junit/junit/4.13.2);
 
 **Link** para o documento [pom.xml](https://github.com/Marlinsk/Park_H-Backend/blob/master/backend-park/pom.xml) do projeto.
+
+## Tutorial
+Passo a passo para rodar um clone do projeto em sua máquina:<br/>
+
+**Observação:** Antes de clonar o repoitório é necessário criar uma conta na [Amazon Web Service](https://aws.amazon.com/pt/). 
+
+Execute o comando abaixo no Git Bash
+```bash
+$ https://github.com/Marlinsk/Park_H-Backend.git
+$ cd Park_H-Backend
+```
