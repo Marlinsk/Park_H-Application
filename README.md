@@ -45,11 +45,16 @@ Dependências Maven das tecnologias listadas acima :
 ## Tutorial
 Passo a passo para rodar o clone do projeto em sua máquina:<br/>
 
-**Observação:** Antes de clonar o repoitório é necessário ter uma conta na [Amazon Web Service](https://aws.amazon.com/pt/). 
+1. Execute o comando abaixo no Git Bash.
+   
+   ```bash
+   $ git clone https://github.com/Marlinsk/Park_H-Backend.git
+   ```
+   **Observação:** Após clonar o repositório certifique-se de achar diretório onde ele está localizado em sua máquina*.
 
-Execute o comando abaixo no Git Bash.
-```bash
-$ git clone https://github.com/Marlinsk/Park_H-Backend.git
-```
+2. Terminando de clonar o repositório, abra o eclipse e siga os seguintes passos: <br/>
 
+   1 - Clique em **File**; 
+   
+   2 - Clique em **Import**;
 
