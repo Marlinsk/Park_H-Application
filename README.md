@@ -1,48 +1,60 @@
-# Aplicação Park H / Back-end 
+# Park H - API  
 Documentação back-end da aplicação Park H.<br/> 
 
 **Aviso:** O projeto foi desenvolvido para fins de estudos acadêmicos, por isso não recomendamos aplicar essa arquitetura na sua empresa sem avaliar se os conceitos se aplicam para resolver às demandas de sua empresa.
 <br/>
 
-## Introdução
-Os projetos neste repositório são microsserviços programados na **linguagem Java** com arquitetura **API RestFull** sobre o tema de aplicativo para divulgação de aluguel de garagem, onde os serviços vão desde a criação de conta do usuário até o anuncio do aluguel da garagem junto do preço.
+## O projeto
+Park H é uma plataforma feita para anúnciar aluguel de garagem com o intuito de diversificar as opções desse serviço. Visando democratizar a procura pelo aluguel ideial que atende suas necessidades.
 
-### Tecnologias e ferramentas utilizadas
+O projeto foi feito durante o 5º semestre da faculdade, com o intuito de estudar como funciona um projeto feito em arquitetura de microsserviços.
 
-- **IDE:** Eclipse. **Obs.:** Recomendamos escolher a opção de instalar o package **Eclipse IDE for Enterprise Java and Web Developers** durante o download do Eclipse IDE;
+## Tecnologias
+Para desenvolver esta aplicação utiliza-mos :
+- [AWS Dynamo DB](https://aws.amazon.com/pt/dynamodb/)
+- [Apache Maven](https://maven.apache.org/)
+- [JUnit 5](https://junit.org/junit5/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Swagger UI](https://swagger.io/tools/swagger-ui/)
+- [Postman](https://www.postman.com/)
+## Maven Dependencies
+Dependências Maven das tecnologias listadas acima :
 - **Apache Maven:** 
-  - Maven compiler plugin;  
-  - Maven buid;
-  - Maven clean; 
-  - Maven starter test;
+  - [Maven compiler plugin](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin/3.8.1);  
 - **Apache Commons:**
-  - Commons Collections 4;
+  - [Commons Collections 4](https://mvnrepository.com/artifact/org.apache.commons/commons-collections4/4.4);
 - **Amazon Web Service Tecnologies:**
-  - AWS SDK;
-  - AWS DynamoDB;
-  - AWS CLI;
-  - Amazon Elastic Container Registry (Amazon ECR);
-  - Amazon Elastic Container Service (Amazon ECS); 
+  - [AWS Java SDK: Bill of Materials](https://mvnrepository.com/artifact/software.amazon.awssdk/bom/2.17.29);
+  - [AWS Java SDK: Services - Amazon S3](https://mvnrepository.com/artifact/software.amazon.awssdk/s3/2.17.29);
 - **Spring Boot Framework:** 
-  - Spring Boot Maven plugin;
-  - Spring data DynamoDB;
-  - Spring starter;
-  - Spring starter parent;
-  - Spring starter test;
-  - Spring starter web;
-  - Spring dev tools;
+  - [Spring Boot Maven plugin](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin/2.5.4);
+  - [Spring Data DynamoDB](https://mvnrepository.com/artifact/com.github.derjust/spring-data-dynamodb/5.1.0);
+  - [Spring starter](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter/2.5.4);
+  - [Spring starter parent](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent/2.5.4);
+  - [Spring starter test](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test/2.5.4);
+  - [Spring starter web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web/2.5.4);
+  - [Spring dev tools](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools/2.5.4);
 - **Swagger:** 
-  - Swagger2 ui;
+  - [SpringFox Swagger2](https://mvnrepository.com/artifact/io.springfox/springfox-swagger2/3.0.0);
+  - [SpringFox Swagger2 UI](https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui/3.0.0);
 - **JUnit:**
-  - JUnit test 4;
-- **Docker:** utilizado para fazer os containers dos microsserviços.
-- **Postman:** utilizado para realizar os testes dos serviços RestFULL de forma programada e automatizada.
+  - [JUnit](https://mvnrepository.com/artifact/junit/junit/4.13.2);
 
-### Arquitetura do projeto<br/>
-O back-end dos microsserviços foram feitos em projeto **Maven Java**, com dependências das tecnologias da **AWS, SpringBoot Framework e Junit**. As libary's que foram utilizadas no código do back-end, foi o banco de dados NoSQL da Amazon que é o **AWS DynamoDB**, o **Spring boot framework** foi usado as library's de serviço **Rest** e **Controller**, e o **JUnit4** foi usado para fazer os testes automatizados na IDE Eclipse. <br/>
+**Link** para o documento [pom.xml](https://github.com/Marlinsk/Park_H-Backend/blob/master/backend-park/pom.xml) do projeto.
 
-<p align="center">
-  <img alt="Fluxograma da arquitetura do projeto" src=".github/Arquitetura dos microsserviços.png" width="799px" height="343">
-</p>
+## Tutorial
+Passo a passo para rodar o clone do projeto em sua máquina:<br/>
 
-Fora do back-end, indo direto para o lado do cliente, foi utilizado a interface do **SwaggerUi (Swagger lib)** para visualizar os dados em **formato JSON** e interagir com os **protocolos Rest**, nesse caso foi também usado a ferramenta **Postman** para fazer os testes de requisição de forma automatizada. <br/>
+1. Execute o comando abaixo no Git Bash.
+   
+   ```bash
+   $ git clone https://github.com/Marlinsk/Park_H-Backend.git
+   ```
+   **Observação:** Após clonar o repositório certifique-se de achar diretório onde ele está localizado em sua máquina*.
+
+2. Terminando de clonar o repositório, abra o eclipse e siga os seguintes passos: <br/>
+
+   1 - Clique em **File**; 
+   
+   2 - Clique em **Import**;
+
