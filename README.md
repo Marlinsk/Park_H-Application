@@ -41,20 +41,3 @@ Dependências Maven das tecnologias listadas acima :
   - [JUnit](https://mvnrepository.com/artifact/junit/junit/4.13.2);
 
 **Link** para o documento [pom.xml](https://github.com/Marlinsk/Park_H-Backend/blob/master/backend-park/pom.xml) do projeto.
-
-## Tutorial
-Passo a passo para rodar o clone do projeto em sua máquina:<br/>
-
-1. Execute o comando abaixo no Git Bash.
-   
-   ```bash
-   $ git clone https://github.com/Marlinsk/Park_H-Backend.git
-   ```
-   **Observação:** Após clonar o repositório certifique-se de achar diretório onde ele está localizado em sua máquina*.
-
-2. Terminando de clonar o repositório, abra o eclipse e siga os seguintes passos: <br/>
-
-   1 - Clique em **File**; 
-   
-   2 - Clique em **Import**;
-
