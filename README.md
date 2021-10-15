@@ -58,4 +58,6 @@ Finalizado está parte, é hora de ir para o **Eclipse**.
 
 **4º passo:** No **Eclipse**, clone o repositório e abra a classe entidade **AluguelGaragem** e coloque o nome da tabela que você criou na **AWS**. 
 
-**5º passo:** Agora para finalizar clique na setinha ao lado do botão verde de rodar a aplicação, ao fazer isso clique em **Run Configurations**, depois vá em java application e clique duas vezes. Criado a nova configuração, coloque a classe principal(classe Application) em **Main class**, depois selecione **Arguments** e digite em **VM arguments** '**-ea -Dspring.config.location=** <caminho do diretório em que está o **application.properties**>', para finalizar vá para a opção **Dependencies** e selecione **Exclude test code** e depois ponha a aplicação para rodar.  
+**5º passo:** Agora para finalizar clique na setinha ao lado do botão verde de rodar a aplicação, ao fazer isso clique em **Run Configurations**, depois vá em java application e clique duas vezes. 
+
+**6º passo:** Criado a nova configuração, coloque a classe principal(classe Application) em **Main class**, depois selecione **Arguments** e digite em **VM arguments** '**-ea  -Dspring.config.location=** <caminho do diretório em que está o **application.properties**>', para finalizar vá para a opção **Dependencies** e selecione **Exclude test code** e depois ponha a aplicação para rodar.  
