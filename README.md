@@ -41,3 +41,21 @@ Dependências Maven das tecnologias listadas acima :
   - [JUnit](https://mvnrepository.com/artifact/junit/junit/4.13.2);
 
 **Link** para o documento [pom.xml](https://github.com/Marlinsk/Park_H-Backend/blob/master/backend-park/pom.xml) do projeto.
+
+## Tutorial
+Passo a passo de como rodar a aplicação na sua máquina:
+
+**1º passo:** Crie uma conta na **AWS** (**obs.:** é necessário ter um cartão de crédito, mas não se preocupe, pois a cobrança só será feita a partir do momento em que exceder o limite dos serviços gratuitos), após criada a conta, procure em **Services** por **DynamoDB**.
+
+**2º passo:** Após clicar no **DynamoDB** em **Services**, clique no em tabelas, feito procure pela opção criar uma nova tabela, nisso é só seguir o que pede. Na chave de partição escreva **id**; 
+
+**3º passo:** Antes de ir para o **Eclipse**, na barra de menu superior do site da **AWS**, clique em cima do nome da sua conta e depois clique na opção **My Security Credentials**. Feito isso procure por **Chaves de acesso** e depois clique na opção **Criar uma nova chave de acesso** copie as duas senhas e crie um arquivo **application.properties** com a seguinte anotação:
+```
+ amazon.aws.accesskey=CHAVE DE ACESSO
+ amazon.aws.secretkey=CHAVE SECRETA
+```
+Finalizado está parte, é hora de ir para o **Eclipse**.
+
+**4º passo:** No **Eclipse**, clone o repositório e abra a classe entidade **AluguelGaragem** e coloque o nome da tabela que você criou na **AWS**. 
+
+**5º passo:** Agora para finalizar clique na setinha ao lado do botão verde de rodar a aplicação, ao fazer isso clique em **Run Configurations**, depois vá em java application e clique duas vezes. Criado a nova configuração, coloque a classe principal(classe Application) em **Main class**, depois selecione **Arguments** e digite em **VM arguments** '**-ea -Dspring.config.location=** <caminho do diretório em que está o **application.properties**>', para finalizar vá para a opção **Dependencies** e selecione **Exclude test code** e depois ponha a aplicação para rodar.  
