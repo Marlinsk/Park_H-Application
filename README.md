@@ -56,8 +56,20 @@ Passo a passo de como rodar a aplicação na sua máquina:
 ```
 Finalizado está parte, é hora de ir para o **Eclipse**.
 
-**4º passo:** No **Eclipse**, clone o repositório e abra a classe entidade **AluguelGaragem** e coloque o nome da tabela que você criou na **AWS**. 
-
+**4º passo:** No **Eclipse**, clone o repositório e abra a classe entidade **AluguelGaragem**, procure e altere o nome tabela na seguinte anotação:
+```
+@DynamoDBTable(tableName = "NOME DA SUA TABELA CRIADA NA AWS") 
+```
 **5º passo:** Agora para finalizar clique na setinha ao lado do botão verde de rodar a aplicação, ao fazer isso clique em **Run Configurations**, depois vá em java application e clique duas vezes. 
 
-**6º passo:** Criado a nova configuração, coloque a classe principal(classe Application) em **Main class**, depois selecione **Arguments** e digite em **VM arguments** '**-ea  -Dspring.config.location=** <caminho do diretório em que está o **application.properties**>', para finalizar vá para a opção **Dependencies** e selecione **Exclude test code** e depois ponha a aplicação para rodar.  
+**6º passo:** Criado a nova configuração, coloque a classe principal(classe Application) em **Main class**, depois selecione **Arguments** e digite em **VM arguments**: 
+```
+-ea -Dspring.config.location=CAMINHO DO DIRETÓRIO EM QUE ESTÁ O application.properties 
+```
+Exemplo de como ficaria:
+```
+-ea -Dspring.config.location=C:/Users/Usuario/aws/ 
+```
+**Obs.:** Não é necessário colocar o nome application.properties, somente a pasta onde ele está, e ' / '.
+
+**7º passo:** Para finalizar vá para a opção **Dependencies** e selecione **Exclude test code** e depois ponha a aplicação para rodar.  
