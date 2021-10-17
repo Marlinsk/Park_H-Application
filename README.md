@@ -76,7 +76,9 @@ Exemplo de como ficaria:
 ```
 **Obs.:** Não é necessário colocar o nome application.properties, somente a pasta onde ele está, e ' / '.
 
-**7º passo:** Para finalizar vá para a opção **Dependencies** e selecione **Exclude test code** e depois ponha a aplicação para rodar: 
+**7º passo:** Para finalizar vá para a opção **Dependencies** e selecione **Exclude test code** e depois ponha a aplicação para rodar. 
+
+**8º passo:** Para interagir com as API's acesse os links abaixo:
 
 Link para interagir com os serviços Rest via **Swagger UI**:
 ```
