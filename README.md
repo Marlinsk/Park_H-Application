@@ -1,7 +1,7 @@
 # Park H - API  
-Documentação back-end da aplicação Park H.<br/> 
+### Documentação back-end da aplicação Park H.<br/> 
 
-**Aviso:** O projeto foi desenvolvido para fins de estudos acadêmicos, por isso não recomendamos aplicar essa arquitetura na sua empresa sem avaliar se os conceitos se aplicam para resolver às demandas de sua empresa.
+**Aviso importante:** O projeto foi desenvolvido para fins de estudos acadêmicos, por isso não recomendamos aplicar essa arquitetura na sua empresa sem avaliar se os conceitos se aplicam para resolver às demandas de sua empresa.
 <br/>
 
 ## O projeto
