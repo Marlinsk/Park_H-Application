@@ -60,11 +60,7 @@ Finalizado está parte, é hora de ir para o **Eclipse**.
 ```
 @DynamoDBTable(tableName = "NOME DA SUA TABELA CRIADA NA AWS") 
 ```
-**5º passo:** Agora para finalizar clique na setinha ao lado do botão verde de rodar a aplicação, ao fazer isso clique em **Run Configurations**, depois vá em **Java Application** e clique duas vezes. 
-
-<p align="center">
-  <img alt="Botão Run" src="https://github.com/Marlinsk/Park_H-Backend/blob/master/backend-park/.github/Print23rfrv.png" width="480px">
-</p>
+**5º passo:** Agora clique na setinha ao lado do botão verde de rodar a aplicação, ao fazer isso clique em **Run Configurations**, depois vá em **Java Application** e clique duas vezes. 
 
 **6º passo:** Criado a nova configuração, coloque a classe principal(classe Application) em **Main class**, depois selecione **Arguments** e digite em **VM arguments**: 
 ```
