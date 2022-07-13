@@ -1,12 +1,11 @@
 package app.src.cod.backend.service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 import javax.transaction.Transactional;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import app.src.cod.backend.interfaces.IAnuncioServiceDefault;
@@ -29,8 +28,8 @@ public class AnuncioService implements IAnuncioServiceDefault {
 	}
 
 	@Override
-	public Page<Anuncio> findAll(Pageable pageable) {
-		return anuncioRepository.findAll(pageable);
+	public List<Anuncio> findAll() {
+		return anuncioRepository.findAll();
 	}
 
 	@Override
