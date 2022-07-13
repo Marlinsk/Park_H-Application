@@ -8,12 +8,11 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
-import app.src.cod.backend.interfaces.IAnuncioServiceDefault;
 import app.src.cod.backend.models.Anuncio;
 import app.src.cod.backend.repositories.AnuncioRepository;
 
 @Service
-public class AnuncioService implements IAnuncioServiceDefault {
+public class AnuncioService {
 	
 	private final AnuncioRepository anuncioRepository;
 	
@@ -22,24 +21,24 @@ public class AnuncioService implements IAnuncioServiceDefault {
 	}
 
 	@Transactional
-	@Override
 	public Anuncio save(Anuncio anuncio) {
 		return this.anuncioRepository.save(anuncio);
 	}
 
-	@Override
 	public List<Anuncio> findAll() {
 		return anuncioRepository.findAll();
 	}
 
-	@Override
 	public Optional<Anuncio> findById(UUID id) {
 		return anuncioRepository.findById(id);
 	}
 
 	@Transactional
-	@Override
 	public void delete(Anuncio anuncio) {
 		anuncioRepository.delete(anuncio);
+	}
+
+	public Optional<Anuncio> findByTituloAnuncio(String tituloAnuncio) {
+		return anuncioRepository.findByTituloAnuncio(tituloAnuncio);
 	}
 }

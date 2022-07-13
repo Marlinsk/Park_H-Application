@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import app.src.cod.backend.dtos.AnuncioDTO;
@@ -52,6 +53,15 @@ public class AnuncioController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Object> buscarUmAnuncio(@PathVariable(value = "id") UUID id) {
 		Optional <Anuncio> anuncioModelOptional = anuncioService.findById(id);
+		if (!anuncioModelOptional.isPresent()) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Anúncio não foi encontrado.");
+		}
+		return ResponseEntity.status(HttpStatus.OK).body(anuncioModelOptional.get());
+	}
+	
+	@GetMapping("/{tituloAnuncio}")
+	public ResponseEntity<Object> pesquisarAnuncio(@RequestParam String tituloAnuncio) {
+		Optional <Anuncio> anuncioModelOptional = anuncioService.findByTituloAnuncio(tituloAnuncio);
 		if (!anuncioModelOptional.isPresent()) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Anúncio não foi encontrado.");
 		}
