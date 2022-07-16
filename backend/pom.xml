@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>app.src.cod</groupId>
-	<artifactId>backend</artifactId>
+	<artifactId>Park-H-REST-Api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend</name>
 	<description>Back-end da Aplicação Park-H, feito com o banco relacional PostgresSQL</description>
