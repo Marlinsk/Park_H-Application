@@ -60,12 +60,17 @@ public class AnuncioController {
 	}
 	
 	@GetMapping("/{tituloAnuncio}")
-	public ResponseEntity<Object> pesquisarAnuncio(@RequestParam String tituloAnuncio) {
+	public ResponseEntity<Object> pesquisarAnuncio(@RequestParam(value = "tituloAnuncio") String tituloAnuncio) {
 		Optional <Anuncio> anuncioModelOptional = anuncioService.findByTituloAnuncio(tituloAnuncio);
 		if (!anuncioModelOptional.isPresent()) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Anúncio não foi encontrado.");
 		}
 		return ResponseEntity.status(HttpStatus.OK).body(anuncioModelOptional.get());
+	}
+	
+	@GetMapping("/busca-filtrada")
+	public ResponseEntity<Object> filtrarPesquisa(@RequestParam(value = "tituloAnuncio", required = false) String tituloAnuncio, @RequestParam(value = "estado", required = false) String estado, @RequestParam(value = "cidade", required = false) String cidade, @RequestParam(value = "bairro", required = false) String bairro) {
+		return ResponseEntity.status(HttpStatus.OK).body(anuncioService.findByFilter(tituloAnuncio, estado, cidade, bairro));
 	}
 	
 	@PutMapping("/{id}")
