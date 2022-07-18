@@ -16,8 +16,9 @@ Após o fim do semestre, foi decidido refazer tudo do projeto, implementando um 
 O projeto após um ano de desenvolvimento e modificações, ele está pronto para ser divulgado para a comunidade e servir como uma inspiração.
 
 ## Tecnologias
-Para desenvolver está aplicação foi utlizado:
+Para desenvolver esta aplicação, foi utlizado:
  - Apache Maven
  - Spring Boot Framework
  - Postgres SQL
+ - Swagger ui
  - Docker
