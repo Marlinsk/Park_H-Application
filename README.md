@@ -2,7 +2,6 @@
 
 Este repositório foi tornado público com **o objetivo de divulgar a ideia e a lógica por trás do código-fonte da parte back-end** do aplicativo de aluguéis de garagem, **Park-H.** Aqui você poderá visualizar o código e usufruir de algumas ideias de implementação e utilizar como conceito ou ideia para o seu projeto no futuro.
 
-### Sobre
 **Um breve resumo da aplicação:** Park-H é uma plataforma de divulgação de aluguéis de garagem, que vão desde garagens de casas até comerciais, tudo é feito de uma forma independende, sendo até comparada ao [Airbnb](https://www.airbnb.com.br/?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&search_mode=flex_destinations_search&flexible_trip_lengths%5B%5D=one_week&location_search=MIN_MAP_BOUNDS&search_type=category_change&category_tag=Tag%3A8522) só que de garagem
 
 A ideia foi dada por um colega, que chegou a fazer em um semestre anterior da faculdade, mas infelizmente o projeto não saiu.
