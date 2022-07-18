@@ -5,7 +5,7 @@ Este repositório foi tornado público com **o objetivo de divulgar a ideia e a 
 ### História 
 **Park-H** é um projeto que surgiu durante uma matéria de semestre da faculdade(mais especificamento no 5º Período), onde na ocasião a matéria era sobre **Rest Api e microsservices**, o intuito foi aprender a construir uma aplicação backe-end utilizando **Spring Boot** e alguns serviços da **Amazon Web Service** como o **Dynamo DB e o ecossistema do EC2**, no final o projeto seria hospedado em um servidor (AWS) para depois ser consumido por um aplicativo feito no **Android Studio**. 
 
-No final, o desenvolvimento o projeto chegando a ser hospedado na AWS, mas infelizmente não foi possível ser consumido devido a problemas técnicos, mas tudo serviu como um grande aprendizado, e o ponto do trabalho foi bem significativo já que a matéria foi focada em back-end, a maior parte da pontuação foi distribuída nesta parte. 
+No final do desenvolvimento, o projeto chegando a ser hospedado na AWS, mas infelizmente não foi possível ser consumido devido a problemas técnicos, mas tudo serviu como um grande aprendizado, e o ponto do trabalho foi bem significativo já que a matéria foi focada em back-end, a maior parte da pontuação foi distribuída nesta parte. 
 
 Após o fim do semestre, foi decidido refazer tudo do projeto, implementando um novo código, novos conceitos e tecnologias, para exxtrair e implementar de uma forma mais detalhada todo o conhecimento aprendido na matéria, agora com mais tempo para prestar atenção aos minímos detalhes que a aplicação precisava. 
 
