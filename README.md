@@ -40,3 +40,23 @@ Dependências Maven das tecnologias listadas acima:
    - [H2 Database Engine](https://mvnrepository.com/artifact/com.h2database/h2);
 
 **Link** para o documento [pom.xml](https://github.com/Marlinsk/Park_H-backend/blob/main/backend/pom.xml) do projeto.
+
+## Tutorial
+Passo a passo de como executar a aplicação no computador
+
+**Aviso:** É necessário ter o docker instalado na máquina.
+
+**1º passo:** Entre na pasta do projeto e execute o comando para fazer o build das imagens e rodar os serviços no docker:
+```
+docker-compose up
+```
+
+**2º passo:** Feito isso, a aplicação estará rodando no docker, e agora pode ser acessada:
+```
+http://localhost:8080/
+```
+
+**Acréscimo:** Para acessar a documentação da Api Rest, basta entrar nesta rota:
+```
+http://localhost:8080/swagger-ui/
+```
