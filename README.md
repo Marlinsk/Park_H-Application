@@ -22,3 +22,21 @@ Para desenvolver esta aplicação, foi utlizado:
  - Postgres SQL
  - Swagger ui
  - Docker
+
+## Maven Dependencies 
+Dependências Maven das tecnologias listadas acima:
+ 
+ - **Spring Boot Framework:**
+   - [Spring Boot Maven Plugin](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin);
+   - [Spring Boot Starter Data JPA](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa); 
+   - [Spring Boot Starter Validation](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation);
+   - [Spring Boot Starter Web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web);
+   - [Spring Boot Starter Test](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test);
+ - **Lombok:**
+   - [Lombok](https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.24);
+ - **Postgresql:**
+   - [PostgreSQL JDBC Driver](https://mvnrepository.com/artifact/postgresql/postgresql);
+ - **H2 Database:**
+   - [H2 Database Engine](https://mvnrepository.com/artifact/com.h2database/h2);
+
+**Link** para o documento [pom.xml](https://github.com/Marlinsk/Park_H-backend/blob/main/backend/pom.xml) do projeto.
