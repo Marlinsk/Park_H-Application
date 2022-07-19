@@ -2,7 +2,8 @@
 
 Este repositório foi tornado público com **o objetivo de divulgar a ideia e a lógica por trás do código-fonte da parte back-end** do aplicativo de aluguéis de garagem, **Park-H.** Aqui você poderá visualizar o código e usufruir de algumas ideias de implementação e utilizar como conceito ou ideia para o seu projeto no futuro.
 
-**Um breve resumo da aplicação:** Park-H é uma plataforma de divulgação de aluguéis de garagem, que vão desde garagens de casas até comerciais, tudo é feito de uma forma independende, sendo até comparada ao [Airbnb](https://www.airbnb.com.br/?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&search_mode=flex_destinations_search&flexible_trip_lengths%5B%5D=one_week&location_search=MIN_MAP_BOUNDS&search_type=category_change&category_tag=Tag%3A8522) só que de garagem.
+## Sobre
+Park-H é uma plataforma de divulgação de aluguéis de garagem, que vão desde garagens de casas até comerciais, tudo é feito de uma forma independende, sendo até comparada ao [Airbnb](https://www.airbnb.com.br/?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&search_mode=flex_destinations_search&flexible_trip_lengths%5B%5D=one_week&location_search=MIN_MAP_BOUNDS&search_type=category_change&category_tag=Tag%3A8522) só que de garagem.
 
 A ideia foi dada por um colega, que chegou a fazer em um semestre anterior da faculdade, mas infelizmente o projeto não saiu.
 
@@ -18,7 +19,44 @@ O projeto após um ano de desenvolvimento e modificações, ele está pronto par
 ## Tecnologias
 Para desenvolver esta aplicação, foi utlizado:
  - Apache Maven
+ - Lombok
  - Spring Boot Framework
  - Postgres SQL
- - Swagger ui
+ - Swagger UI
  - Docker
+
+## Maven Dependencies 
+Dependências Maven das tecnologias listadas acima:
+ 
+ - **Spring Boot Framework:**
+   - [Spring Boot Maven Plugin](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin);
+   - [Spring Boot Starter Data JPA](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa); 
+   - [Spring Boot Starter Validation](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation);
+   - [Spring Boot Starter Web](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web);
+   - [Spring Boot Starter Test](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test);
+ - **Lombok:**
+   - [Lombok](https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.24);
+ - **Postgresql:**
+   - [PostgreSQL JDBC Driver](https://mvnrepository.com/artifact/postgresql/postgresql);
+
+**Link** para o documento [pom.xml](https://github.com/Marlinsk/Park_H-backend/blob/main/backend/pom.xml) do projeto.
+
+## Tutorial
+Passo a passo de como executar a aplicação no computador
+
+**Aviso:** É necessário ter o docker instalado na máquina.
+
+**1º passo:** Entre na pasta do projeto e execute o comando para fazer o build das imagens e rodar os serviços no docker:
+```
+docker-compose up
+```
+
+**2º passo:** Feito isso, a aplicação estará rodando no docker, e agora pode ser acessada:
+```
+http://localhost:8080/
+```
+
+**Acréscimo:** Para acessar a documentação da Api Rest, basta entrar nesta rota:
+```
+http://localhost:8080/swagger-ui/
+```
