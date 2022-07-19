@@ -19,9 +19,10 @@ O projeto após um ano de desenvolvimento e modificações, ele está pronto par
 ## Tecnologias
 Para desenvolver esta aplicação, foi utlizado:
  - Apache Maven
+ - Lombok
  - Spring Boot Framework
  - Postgres SQL
- - Swagger ui
+ - Swagger UI
  - Docker
 
 ## Maven Dependencies 
@@ -37,8 +38,6 @@ Dependências Maven das tecnologias listadas acima:
    - [Lombok](https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.24);
  - **Postgresql:**
    - [PostgreSQL JDBC Driver](https://mvnrepository.com/artifact/postgresql/postgresql);
- - **H2 Database:**
-   - [H2 Database Engine](https://mvnrepository.com/artifact/com.h2database/h2);
 
 **Link** para o documento [pom.xml](https://github.com/Marlinsk/Park_H-backend/blob/main/backend/pom.xml) do projeto.
 
