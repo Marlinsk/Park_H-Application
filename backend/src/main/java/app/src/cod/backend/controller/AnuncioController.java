@@ -59,7 +59,7 @@ public class AnuncioController {
 		return ResponseEntity.status(HttpStatus.OK).body(anuncioModelOptional.get());
 	}
 	
-	@GetMapping("/{tituloAnuncio}")
+	@GetMapping("/busca-por-nome/{tituloAnuncio}")
 	public ResponseEntity<Object> pesquisarAnuncio(@RequestParam(value = "tituloAnuncio") String tituloAnuncio) {
 		Optional <Anuncio> anuncioModelOptional = anuncioService.findByTituloAnuncio(tituloAnuncio);
 		if (!anuncioModelOptional.isPresent()) {
@@ -73,7 +73,7 @@ public class AnuncioController {
 		return ResponseEntity.status(HttpStatus.OK).body(anuncioService.findByFilter(tituloAnuncio, estado, cidade, bairro));
 	}
 	
-	@PutMapping("/{id}")
+	@PutMapping("/atualizar/{id}")
 	public ResponseEntity<Object> atualizarAnuncio(@PathVariable(value = "id") UUID id, @RequestBody @Valid AnuncioDTO anuncioDTO) {
 		Optional <Anuncio> anuncioModelOptional = anuncioService.findById(id);
 		if (!anuncioModelOptional.isPresent()) {
