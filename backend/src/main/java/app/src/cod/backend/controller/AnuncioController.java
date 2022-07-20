@@ -59,7 +59,7 @@ public class AnuncioController {
 		return ResponseEntity.status(HttpStatus.OK).body(anuncioModelOptional.get());
 	}
 	
-	@GetMapping("/busca-por-nome/{tituloAnuncio}")
+	@GetMapping("/{tituloAnuncio}")
 	public ResponseEntity<Object> pesquisarAnuncio(@RequestParam(value = "tituloAnuncio") String tituloAnuncio) {
 		Optional <Anuncio> anuncioModelOptional = anuncioService.findByTituloAnuncio(tituloAnuncio);
 		if (!anuncioModelOptional.isPresent()) {
